@@ -3555,34 +3555,6 @@
             <label>31176</label>
             <textcolor>$INFO[Skin.String(GeneralTextColor)]</textcolor>
         </control>
-        <control type="radiobutton" id="8030">
-            <!-- Enable 4k animations -->
-            <description/>
-            <include>SkinSettings_Button</include>
-            <label>31075</label>
-            <onclick condition="String.IsEqual(Skin.String(SplashAnimationResolution),2160p)">Skin.SetString(SplashAnimationResolution,1080p)</onclick>
-            <onclick condition="String.IsEqual(Skin.String(SplashAnimationResolution),1080p)">Skin.SetString(SplashAnimationResolution,2160p)</onclick>
-            <selected>String.IsEqual(Skin.String(SplashAnimationResolution),2160p)</selected>
-            <visible>!Skin.HasSetting(DisableAnimatedIntro) + String.IsEmpty(Skin.String(SplashScreen)) + String.IsEmpty(Skin.String(AutoStartPlayList))</visible>
-        </control>
-        <control type="radiobutton" id="8028">
-            <!-- Use alternative animated splash (shorter) -->
-            <description/>
-            <include>SkinSettings_Button</include>
-            <label>31044</label>
-            <onclick>Skin.ToggleSetting(UseAltDefaultIntro)</onclick>
-            <selected>Skin.HasSetting(UseAltDefaultIntro)</selected>
-            <visible>!Skin.HasSetting(DisableAnimatedIntro) + String.IsEmpty(Skin.String(SplashScreen)) + String.IsEmpty(Skin.String(AutoStartPlayList))</visible>
-        </control>
-        <control type="radiobutton" id="8021">
-            <!-- disable video splash -->
-            <description/>
-            <include>SkinSettings_Button</include>
-            <label>31041</label>
-            <onclick>Skin.ToggleSetting(DisableAnimatedIntro)</onclick>
-            <selected>Skin.HasSetting(DisableAnimatedIntro)</selected>
-            <visible>String.IsEmpty(Skin.String(SplashScreen)) + String.IsEmpty(Skin.String(AutoStartPlayList))</visible>
-        </control>
         <control type="radiobutton" id="8029">
             <!-- Use alternative splash image -->
             <description/>
@@ -3590,7 +3562,7 @@
             <label>31045</label>
             <onclick>Skin.ToggleSetting(UseAltDefaultSplashImage)</onclick>
             <selected>Skin.HasSetting(UseAltDefaultSplashImage)</selected>
-            <visible>Skin.HasSetting(DisableAnimatedIntro) + String.IsEmpty(Skin.String(SplashScreen)) + String.IsEmpty(Skin.String(AutoStartPlayList))</visible>
+            <visible>String.IsEmpty(Skin.String(SplashScreen)) + String.IsEmpty(Skin.String(AutoStartPlayList))</visible>
         </control>
         <control type="radiobutton" id="8020">
             <!-- use custom splash image or video -->

@@ -103,10 +103,7 @@
         <onload condition="!Skin.HasSetting(HomeMenuDefaults46)">Skin.SetBool(ForceVideoPlaybackStop)</onload>
         <onload condition="!Skin.HasSetting(HomeMenuDefaults46)">Skin.SetBool(AutoCloseVideoOSD)</onload>
         <onload condition="!Skin.HasSetting(HomeMenuDefaults46)">Skin.SetString(WidgetsGlobalLimit, 30)</onload>
-        <onload condition="!Skin.HasSetting(HomeMenuDefaults46)">Skin.SetString(SplashAnimationResolution,1080p)</onload>
 
-        <!-- default splash resolution -->
-        <onload condition="String.IsEmpty(Skin.String(SplashAnimationResolution))">Skin.SetString(SplashAnimationResolution,1080p)</onload>
         <!-- default color settings (titan default theme - BINGIE) -->
         <onload condition="!Skin.String(HomeViewDetailsFocusColor)">Skin.SetString(HomeViewDetailsFocusColor, cce0e0e0)</onload>
         <onload condition="!Skin.String(HomeViewDetailsFocusColor.name)">Skin.SetString(HomeViewDetailsFocusColor.name, Light Gray)</onload>
